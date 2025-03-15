@@ -1,8 +1,9 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
-import { useTransition } from "react";
+import { Checkbox } from "@/components/ui/checkbox";
+import { useState, useTransition } from "react";
+import { MdDeleteForever } from "react-icons/md";
 
 export function TodoItem({
   todo,
@@ -17,21 +18,34 @@ export function TodoItem({
       await onDelete();
     });
   };
-  return (
-    <Card className="flex">
-      <CardHeader>
-        <CardTitle>{todo.text}</CardTitle>
-      </CardHeader>
 
-      <CardFooter>
-        <Button
-          className="py-1 px-2 ml-2 rounded border border-gray-500 hover:border-gray-300"
-          disabled={isLoadingDelete}
-          onClick={handleDelete}
+  const [isChecked, setIsChecked] = useState(false);
+  const checkHandler = () => {
+    setIsChecked(!isChecked);
+  };
+  return (
+    <div
+      className={`flex items-center border rounded p-1 mb-3 ${isChecked ? "opacity-40 text-green-500" : ""}`}
+    >
+      <div className="flex">
+        <Checkbox
+          checked={isChecked}
+          onClick={checkHandler}
+          className={`w-6 h-6 rounded-full`}
+        />
+        <div
+          className={`flex items-center ml-2 ${isChecked ? "line-through" : ""}`}
         >
-          Delete
-        </Button>
-      </CardFooter>
-    </Card>
+          {todo.text}
+        </div>
+      </div>
+      <Button
+        className="py-1 px-2 ml-auto "
+        disabled={isLoadingDelete}
+        onClick={handleDelete}
+      >
+        <MdDeleteForever className="size-6 hover:text-red-500" />
+      </Button>
+    </div>
   );
 }

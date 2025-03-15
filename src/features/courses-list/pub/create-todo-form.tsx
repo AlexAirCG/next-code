@@ -15,6 +15,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { createTodoAction } from "../action";
 import { cn } from "@/lib/utils";
+import { MdLibraryAdd } from "react-icons/md";
 
 const createCourseFormShema = z.object({
   text: z.string(),
@@ -45,7 +46,7 @@ export function CreateTodoForm({
         })}
         className={cn(className, "")}
       >
-        <div className="flex justify-between">
+        <div className="flex max-w-[400px] ">
           <div className="w-full">
             <FormField
               control={form.control}
@@ -60,15 +61,10 @@ export function CreateTodoForm({
               )}
             />
           </div>
-          <div>
-            <Button
-              className="py-1 px-2 ml-2 rounded border border-gray-500 hover:border-gray-300"
-              type="submit"
-              disabled={isCreateTransition}
-            >
-              Добавить
-            </Button>
-          </div>
+
+          <Button type="submit" disabled={isCreateTransition}>
+            <MdLibraryAdd className="size-8 hover:text-green-500 ml-2" />
+          </Button>
         </div>
       </form>
     </Form>
