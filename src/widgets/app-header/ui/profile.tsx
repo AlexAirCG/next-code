@@ -17,10 +17,7 @@ export function Profile() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button
-          variant="ghost"
-          className="p-px rounded-full self-center h-8 w-8"
-        >
+        <Button className="p-px rounded-full self-center h-8 w-8">
           <Avatar className="w-8 h-8 border hover:border-2">
             <AvatarFallback>AC</AvatarFallback>
           </Avatar>
