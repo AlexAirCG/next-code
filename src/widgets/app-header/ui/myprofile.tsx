@@ -18,7 +18,7 @@ export function MyProfile() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline">Open</Button>
+        <Button>Open</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56 bg-black">
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
