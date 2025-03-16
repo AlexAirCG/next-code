@@ -23,6 +23,7 @@ export function TodoItem({
   const checkHandler = () => {
     setIsChecked(!isChecked);
   };
+
   return (
     <div
       className={`flex items-center border rounded p-1 mb-3 ${isChecked ? "opacity-40 text-green-500" : ""}`}
