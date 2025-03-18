@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint-types": "tsc --noEmit",
+    "lint:types": "tsc --noEmit",
     "test": "jest",
     "test:e2e": "playwright test"
   },
