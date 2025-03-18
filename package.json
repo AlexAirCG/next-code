@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "lint:types": "tsc --noEmit",
-    "test": "jest",
-    "test:e2e": "playwright test"
+    "test": "jest"
   },
   "dependencies": {
     "@hookform/resolvers": "^4.1.3",
