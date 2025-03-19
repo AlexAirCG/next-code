@@ -66,7 +66,6 @@ export function CreateTodoForm({
             <MdLibraryAdd className="size-8 hover:text-green-500 ml-2" />
           </Button>
         </div>
-        <div className="bg-red-500 w-[300px] h-[100px] mt-2"></div>
       </form>
     </Form>
   );
