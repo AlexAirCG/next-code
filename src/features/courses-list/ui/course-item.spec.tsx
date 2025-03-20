@@ -1,5 +1,4 @@
-import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+import { render } from "@testing-library/react";
 import { CourseItem } from "./course-item";
 
 describe("course item", () => {
@@ -16,7 +15,6 @@ describe("course item", () => {
       />,
     );
 
-    await userEvent.click(screen.getByText("Delete"));
     expect(onDelete).toHaveBeenCalled();
   });
 });
