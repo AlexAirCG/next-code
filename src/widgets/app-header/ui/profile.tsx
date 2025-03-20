@@ -32,8 +32,8 @@ export function Profile() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button className="p-px rounded-full self-center h-8 w-8">
-          <Avatar className="w-8 h-8 border hover:border-2">
+        <Button className="rounded-full h-8 w-8">
+          <Avatar className="w-8 h-8 border">
             <AvatarImage src={session.data?.user.image} />
             <AvatarFallback>AC</AvatarFallback>
           </Avatar>
@@ -56,6 +56,7 @@ export function Profile() {
             </Link>
           </DropdownMenuItem>
           <DropdownMenuItem
+            className="hover:bg-amber-500"
             disabled={isLoadingSignOut}
             onClick={() => signOut()}
           >
