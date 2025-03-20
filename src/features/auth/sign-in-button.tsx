@@ -9,7 +9,7 @@ export function SignInButton() {
 
   return (
     <Button
-      className="flex items-center cursor-pointer"
+      className="flex items-center cursor-pointer hover:bg-amber-500 p-1 rounded"
       onClick={handleSignOut}
     >
       <LogIn className=" mr-2 h-4 w-4" /> Войти
