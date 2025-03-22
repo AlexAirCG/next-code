@@ -13,9 +13,7 @@ export const nextAuthConfig: AuthOptions = {
       server: process.env.EMAIL_SERVER,
       from: process.env.EMAIL_FROM,
     }),
-    // EmailProvider({
-    //   server: {
-    //     host: process.env.EMAIL_SERVER_HOST,
+    // EmailProvider({npm ci --legacy-peer-deps
     //     port: privateConfig.EMAIL_SERVER_PORT,
     //     auth: {
     //       user: process.env.EMAIL_SERVER_USER,
