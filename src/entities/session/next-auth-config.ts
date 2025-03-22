@@ -12,13 +12,13 @@ export const nextAuthConfig: AuthOptions = {
     EmailProvider({
       server: {
         host: privateConfig.EMAIL_SERVER_HOST,
-        // port: process.env.EMAIL_SERVER_PORT,
+        // port: privateConfig.EMAIL_SERVER_PORT,
         auth: {
           user: privateConfig.EMAIL_SERVER_USER,
           pass: privateConfig.EMAIL_SERVER_PASSWORD,
         },
       },
-      from: process.env.EMAIL_FROM,
+      from: privateConfig.EMAIL_FROM,
     }),
     privateConfig.GOOGLE_CLIENT_ID &&
       privateConfig.GOOGLE_CLIENT_SECRET &&
