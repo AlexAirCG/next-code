@@ -22,7 +22,7 @@ export const nextAuthConfig: AuthOptions = {
           pass: privateConfig.EMAIL_SERVER_PASSWORD,
         },
       },
-      from: process.env.EMAIL_FROM,
+      from: privateConfig.EMAIL_FROM,
     }),
     privateConfig.GOOGLE_CLIENT_ID &&
       privateConfig.GOOGLE_CLIENT_SECRET &&
